@@ -1613,8 +1613,8 @@ QuasistaticSimulator::GetActuatedJointLimits() const {
     joint_limits[model]["lower"] = Eigen::VectorXd(n_q);
     joint_limits[model]["upper"] = Eigen::VectorXd(n_q);
     int n_dofs = 0;
-    for (const auto &joint_idx : plant_->GetJointIndices(model)) {
-      const auto &joint = plant_->get_joint(joint_idx);
+    for (const auto& joint_idx : plant_->GetJointIndices(model)) {
+      const auto& joint = plant_->get_joint(joint_idx);
       const auto n_dof = joint.num_positions();
       if (n_dof != 1) {
         continue;
