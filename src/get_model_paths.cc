@@ -7,8 +7,7 @@ using std::filesystem::path;
 
 std::filesystem::path GetPyPackagesPath() {
   static auto file_path = path(__FILE__);
-  static auto py_package_path =
-      file_path.parent_path() / path("../../..") / path("PycharmProjects");
+  static auto py_package_path = path("/home/josebarreiros/global_cito");
   return py_package_path;
 }
 
@@ -20,7 +19,6 @@ std::filesystem::path GetQsimModelsPath() {
 
 std::filesystem::path GetRoboticsUtilitiesModelsPath() {
   static auto robo_util_models_path = GetPyPackagesPath() /
-                                      path("robotics_utilities_pang") /
                                       path("robotics_utilities/models");
   return robo_util_models_path;
 }
