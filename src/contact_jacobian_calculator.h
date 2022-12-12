@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <Eigen/Dense>
 
 #include "drake/common/default_scalars.h"
